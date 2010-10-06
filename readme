@@ -1,0 +1,61 @@
+<script>
+parent.document.getElementById("gxsj").innerHTML="余票信息每小时更新一次，本次信息更新时间为21:29。";
+
+
+parent.mygrid.clearAll();
+
+parent.document.getElementById("stationDIV").innerHTML="日期：<strong>20101006</strong>；<strong>广州</strong>→<strong>重庆</strong>列车全部余票信息<strong>9</strong>条：";
+
+if(parent.document.getElementById("ckb1").checked &&
+	!parent.document.getElementById("ckb2").checked &&
+	!parent.document.getElementById("ckb3").checked &&
+	!parent.document.getElementById("ckb4").checked &&
+	!parent.document.getElementById("ckb5").checked &&
+	!parent.document.getElementById("ckb6").checked &&
+	!parent.document.getElementById("ckb7").checked &&
+	parent.cc.getComboText().length == 0){
+
+parent.mygrid.setColumnHidden(7,"true");
+parent.mygrid.setColumnHidden(8,"true");
+parent.mygrid.setColumnHidden(9,"true");
+}else{
+var string = parent.cc.getComboText();
+if(string.length != 0 && (string.charAt(0) == 'C' || string.charAt(0) == 'D' || string.charAt(0) == 'G')){
+parent.mygrid.setColumnHidden(7,"true");
+parent.mygrid.setColumnHidden(8,"true");
+parent.mygrid.setColumnHidden(9,"true");
+}else{
+parent.mygrid.setColumnHidden(7,"false");
+parent.mygrid.setColumnHidden(8,"false");
+parent.mygrid.setColumnHidden(9,"false");
+}
+}
+
+//parent.mygrid.addRow(0,"1,K192^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K192 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,09:04 , 07:50 , 22:46,0 , -- ,0,0,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,成都^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E6%88%90%E9%83%BD,快速" , 0);
+parent.mygrid.addRow(0,"1,K192(广州->成都)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K192 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 09:04 ,07:50 ,22:46, 0 , -- ,0,0,--,--,--,有,快速" , 0);
+
+//parent.mygrid.addRow(1,"2,K356^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K356 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,10:50 , 15:57 , 29:07,0 , -- ,5,10,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 1);
+parent.mygrid.addRow(1,"2,K356(广州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K356 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 10:50 ,15:57 ,29:07, 0 , -- ,5,10,--,--,--,有,快速" , 1);
+
+//parent.mygrid.addRow(2,"3,K837^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K837 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,12:30 , 19:02 , 30:32,0 , -- ,2,10,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 2);
+parent.mygrid.addRow(2,"3,K837(广州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K837 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 12:30 ,19:02 ,30:32, 0 , -- ,2,10,--,--,--,有,快速" , 2);
+
+//parent.mygrid.addRow(3,"4,K586^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K586 ,广州东^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E%E4%B8%9C , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,13:09 , 17:58 , 28:49,214 , -- ,42,12,--,--,--,有,深圳西^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E6%B7%B1%E5%9C%B3%E8%A5%BF,成都^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E6%88%90%E9%83%BD,快速" , 3);
+parent.mygrid.addRow(3,"4,K586(深圳西->成都)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K586 ,广州东^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E%E4%B8%9C , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 13:09 ,17:58 ,28:49, 214 , -- ,42,12,--,--,--,有,快速" , 3);
+
+//parent.mygrid.addRow(4,"5,K688^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K688 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,14:41 , 15:36 , 24:55,102 , -- ,2,4,--,--,--,有,惠州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E6%83%A0%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 4);
+parent.mygrid.addRow(4,"5,K688(惠州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K688 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 14:41 ,15:36 ,24:55, 102 , -- ,2,4,--,--,--,有,快速" , 4);
+
+//parent.mygrid.addRow(5,"6,K202^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K202 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,15:47 , 14:12 , 22:25,287 , -- ,0,3,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 5);
+parent.mygrid.addRow(5,"6,K202(广州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K202 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 15:47 ,14:12 ,22:25, 287 , -- ,0,3,--,--,--,有,快速" , 5);
+
+//parent.mygrid.addRow(6,"7,K776^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K776 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,16:56 , 14:34 , 21:38,691 , -- ,8,0,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 6);
+parent.mygrid.addRow(6,"7,K776(广州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K776 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 16:56 ,14:34 ,21:38, 691 , -- ,8,0,--,--,--,有,快速" , 6);
+
+//parent.mygrid.addRow(7,"8,K776^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K776 ,广州北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E%E5%8C%97 , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,17:22 , 14:34 , 21:12,0 , -- ,1,0,--,--,--,无,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97,快速" , 7);
+parent.mygrid.addRow(7,"8,K776(广州->重庆北)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K776 ,广州北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E%E5%8C%97 , 重庆北^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86%E5%8C%97, 17:22 ,14:34 ,21:12, 0 , -- ,1,0,--,--,--,无,快速" , 7);
+
+//parent.mygrid.addRow(8,"9,K811^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K811 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86,20:25 , 05:48 , 33:23,280 , -- ,75,0,--,--,--,有,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E,重庆^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86,快速" , 8);
+parent.mygrid.addRow(8,"9,K811(广州->重庆)^skbcx.jsp?cxlx=cc&date=20101006&trainCode=K811 ,广州^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E5%B9%BF%E5%B7%9E , 重庆^skbcx.jsp?cxlx=czjgcc&zm=&date=20101006&stationName_passTrain=%E9%87%8D%E5%BA%86, 20:25 ,05:48 ,33:23, 280 , -- ,75,0,--,--,--,有,快速" , 8);
+</script>
+
